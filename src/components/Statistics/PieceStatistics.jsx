@@ -1,10 +1,11 @@
-import {Box} from '../Box/Box'
+// import { Box } from '../Box/Box';
+import { StatisticsItem, StatisticdLabel, StatisticsPercentage } from '../Statistics/Statistics.styled';
 
-export const PieceStatistics = ({ label, percentage }) => {
+export const PieceStatistics = ({ label, percentage, id }) => {
     return (
-        <Box display="flex" alignItems="center" justifyContent="center" as="li" flexDirection="column">
-            <span class="label">{label}</span>
-            <span class="percentage">{percentage}</span>
-        </Box>
+        <StatisticsItem>
+            <StatisticdLabel>{label}</StatisticdLabel>
+            <StatisticsPercentage>{percentage}</StatisticsPercentage>
+        </StatisticsItem>
     )
 };
